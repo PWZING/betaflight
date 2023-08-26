@@ -20,12 +20,12 @@
 #define USE_PARAMETER_GROUPS
 // type conversion warnings.
 // -Wconversion can be turned on to enable the process of eliminating these warnings
-//#pragma GCC diagnostic warning "-Wconversion"
+// #pragma GCC diagnostic warning "-Wconversion"
 #pragma GCC diagnostic ignored "-Wsign-conversion"
 // -Wpadded can be turned on to check padding of structs
-//#pragma GCC diagnostic warning "-Wpadded"
+// #pragma GCC diagnostic warning "-Wpadded"
 
-//#define SCHEDULER_DEBUG // define this to use scheduler debug[] values. Undefined by default for performance reasons
+// #define SCHEDULER_DEBUG // define this to use scheduler debug[] values. Undefined by default for performance reasons
 #define DEBUG_MODE DEBUG_NONE // change this to change initial debug mode
 
 #define I2C1_OVERCLOCK true
@@ -62,30 +62,30 @@
 #endif
 
 #if defined(STM32F4) || defined(STM32F7)
-#define TASK_GYROPID_DESIRED_PERIOD     125
-#define SCHEDULER_DELAY_LIMIT           10
+#define TASK_GYROPID_DESIRED_PERIOD 125
+#define SCHEDULER_DELAY_LIMIT 10
 #else
-#define TASK_GYROPID_DESIRED_PERIOD     1000
-#define SCHEDULER_DELAY_LIMIT           100
+#define TASK_GYROPID_DESIRED_PERIOD 1000
+#define SCHEDULER_DELAY_LIMIT 100
 #endif
 
 #if (__FPU_PRESENT == 1) && (__FPU_USED == 1)
-#define DEFAULT_AUX_CHANNEL_COUNT       MAX_AUX_CHANNEL_COUNT
+#define DEFAULT_AUX_CHANNEL_COUNT MAX_AUX_CHANNEL_COUNT
 #else
-#define DEFAULT_AUX_CHANNEL_COUNT       6
+#define DEFAULT_AUX_CHANNEL_COUNT 6
 #endif
 
 #define USE_CLI
-#define USE_PPM
+// #define USE_PPM
 #define USE_PWM
 #define SERIAL_RX
-#define USE_SERIALRX_CRSF       // Team Black Sheep Crossfire protocol
-#define USE_SERIALRX_IBUS       // FlySky and Turnigy receivers
-#define USE_SERIALRX_SBUS       // Frsky and Futaba receivers
-#define USE_SERIALRX_SPEKTRUM   // SRXL, DSM2 and DSMX protocol
-#define USE_SERIALRX_SUMD       // Graupner Hott protocol
-#define USE_SERIALRX_SUMH       // Graupner legacy protocol
-#define USE_SERIALRX_XBUS       // JR
+#define USE_SERIALRX_CRSF     // Team Black Sheep Crossfire protocol
+#define USE_SERIALRX_IBUS     // FlySky and Turnigy receivers
+#define USE_SERIALRX_SBUS     // Frsky and Futaba receivers
+#define USE_SERIALRX_SPEKTRUM // SRXL, DSM2 and DSMX protocol
+// #define USE_SERIALRX_SUMD     // Graupner Hott protocol
+// #define USE_SERIALRX_SUMH       // Graupner legacy protocol
+// #define USE_SERIALRX_XBUS       // JR
 
 #if (FLASH_SIZE > 64)
 #define MAX_PROFILE_COUNT 3
